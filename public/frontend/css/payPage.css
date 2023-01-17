@@ -1,0 +1,134 @@
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin-top: 30px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    align-items: center;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul .active {
+    background-color: var(--black-color);
+    padding: 10px 15px;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+header ul .active a {
+    color: #fff;
+}
+
+header ul li a {
+    color: var(--black-color);
+    font-weight: bold;
+
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+
+.teachers .container{
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.teachers .content .box{
+
+border-radius: var(--radiusForContainer);
+box-shadow: var(--shadow);
+padding: 20px;
+height: 550px;
+background-color: var(--blueWithWhite);
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+width: 600px ;
+}
+.teachers .content .box .head{
+    display: flex;
+justify-content: space-between;
+width: 400px;
+
+}
+.teachers .content .box .head .materials{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+.teachers .content .box .head .materials .material-en{
+    margin-top: 5px;
+}
+
+.teachers .content .box .center{
+    width: 400px;
+    font-size: 22px;
+
+    
+}
+.teachers .content .box .center .name-teacher{
+    color: var(--black-color);
+}
+.teachers .content .box .center span{
+    color: var(--blue-dark-color);
+    font-weight: bold;
+}
+
+.teachers .content .box .detail{
+    width: 400px;
+font-size: 22px;
+}
+.teachers .content .box .detail h3{
+color: var(--blue-dark-color);
+
+}
+.teachers .content .box .detail p{
+    font-size: 19px;
+    margin-top: 10px;
+    line-height: 2;
+
+}
+
+.teachers .content .box button{
+    border: none;
+outline: none;
+margin-top: 20px;
+background-color: var(--color-primary);
+width: 200px;
+height: 40px;
+border-radius: var(--radiusInput);
+cursor: pointer;
+transition: 0.2s;
+font-weight: bold;
+font-size: 18px;
+}
+.teachers .content .box button:hover{
+    background-color: #38a8ca;
+    transition: 0.2s;
+
+}
+

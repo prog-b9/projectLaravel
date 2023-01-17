@@ -1,0 +1,283 @@
+* {
+    font-family: 'Cairo', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+:root {
+    --color-primary: #9AD0E1;
+    --transtion-timing: 0.3s;
+    --black-color: #333;
+    --blue-dark-color: #3CADD0;
+    --blueWithWhite: #F2FEFF;
+    --shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+    --radiusForContainer: 10px;
+    --radiusInput: 10px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*************Start Container****************/
+.container {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    margin-top: 150px;
+    padding: 0;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+
+}
+
+.container .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.container .col:nth-child(1) img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 50px 0;
+}
+
+.container .col:nth-child(1) #form {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.container .col:nth-child(1) #form .inputBox {
+    margin: 5px 0;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+}
+
+.container .col:nth-child(1) #form .inputBox input {
+    width: 100%;
+    height: 50px;
+    padding-right: 35px;
+    background-color: var(--color-primary);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: var(--color-black);
+}
+
+.container .col:nth-child(1) #form .inputBox input::placeholder {
+    color: var(--color-black);
+}
+
+.container .col:nth-child(1) #form .inputBox input+div {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+.container .col:nth-child(1) #form .inputBox ion-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 21px;
+    color: var(--color-black);
+    top: 20px;
+}
+
+.container .col:nth-child(1) #form .inputBox #btn-sign-up {
+    background-color: var(--color-primary);
+    color: var(--black-color);
+    cursor: pointer;
+    font-size: 23px;
+    padding-left: 0;
+    font-weight: bold;
+    transition: var(--transtion-timing);
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+}
+.container .col:nth-child(1) #form .inputBox .error-submit{
+    width: 50%;
+    height: 60px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 30%);
+    background-color: #06c5b2;
+    background: radial-gradient( rgb(209 205 205) , #1fd326);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .col:nth-child(1) #form .inputBox #btn-sign-up:hover {
+    transition: var(--transtion-timing);
+    background-color: var(--blue-dark-color);
+}
+
+.container .col:nth-child(1) #form .btn-footer {
+    padding: 30px 10px;
+}
+
+.container .col:nth-child(1) #form .btn-footer p {
+    color: var(--color-black);
+font-weight: bold
+;
+}
+
+.container .col:nth-child(1) #form .btn-footer p a {
+    color: var(--blue-dark-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/* Second Column Login  */
+.container .col:nth-child(2) {
+    background-color: var(--color-primary);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+.container .col:nth-child(2) h2 {
+    color: #222;
+    font-size: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+.container .col:nth-child(2) .text {
+    text-transform: capitalize;
+    color: #ddd;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.container .col:nth-child(2) a {
+    margin-top: 30px;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-primary);
+    background-color: var(--color-grey);
+    font-size: 22px;
+    text-transform: capitalize;
+    border-radius: 50px;
+    transition: var(--transtion-timing);
+}
+
+.container .col:nth-child(2) a:hover {
+    transition: var(--transtion-timing);
+    background-color: rgb(192, 191, 191);
+}
+
+
+
+
+
+
+/* Screen */
+/* max-width 768px */
+
+@media (max-width:768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .container .col:nth-child(1) #form .inputBox {
+        width: 100%;
+    }
+
+    .container .col:nth-child(2) {
+        background-color: var(--color-primary);
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        padding: 30px 0;
+    }
+}
+
+/* max-width 300px */
+@media (max-width:300px) {
+    .container .col:nth-child(2) h1 {
+        font-size: 30px;
+    }
+
+    .container .col:nth-child(1) h1 {
+        font-size: 30px;
+
+    }
+
+    .container .col:nth-child(1) #form .inputBox #btn-sign-up {
+        font-size: 17px;
+    }
+
+    .container .col:nth-child(2) a {
+        width: 100px;
+    }
+    .container .col:nth-child(1) #form .inputBox .error-submit{
+        width: 100%;
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+/*************End Container*******************/
+
+/* Small  Media*/
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Media */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Media */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
