@@ -59,13 +59,14 @@ header img {
 border-radius: var(--radiusForContainer);
 box-shadow: var(--shadow);
 padding: 20px;
-height: 550px;
+height: 750px;
 background-color: var(--blueWithWhite);
 display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
 width: 600px ;
+margin: 100px 0;
 }
 .teachers .content .box .head{
     display: flex;
@@ -112,6 +113,20 @@ color: var(--blue-dark-color);
     line-height: 2;
 
 }
+.teachers .content .box .txt-mail{
+    color:white;
+    font-size: 28px;
+    background-color: var(--black-color);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.teachers .content .box .txt-mail:hover{
+    transform: translateY(-8px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.21);
+    transition: 0.2s;
+
+}
 
 .teachers .content .box button{
     border: none;
@@ -125,6 +140,11 @@ cursor: pointer;
 transition: 0.2s;
 font-weight: bold;
 font-size: 18px;
+/* text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--black-color); */
 }
 .teachers .content .box button:hover{
     background-color: #38a8ca;

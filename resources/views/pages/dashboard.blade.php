@@ -6,17 +6,13 @@
 <link rel="stylesheet" href="{{ asset('frontend/css/homePage.css') }}">
 <link rel="icon" href="{{url('frontend/images/logo.png')}}">
 
-  
-  
-
-
     <header>
         <div class="container">
             <ul>
                 <li><a href="#">الصفحة الرئسية</a></li>
                 <li><a href="#">المدرسين </a></li>
                 <li class="active"><a href="#">{{$data->email}}</a></li>
-                <li> <a href="login">logout</a></li>
+                <li> <a href="/logout">logout</a></li>
                
             </ul>
             <img src="{{url('frontend/images/logo.png')}}" alt="">
@@ -52,9 +48,15 @@
                     <div class="center">
                         <span>الاستاذ :   </span>  <span class="name-teacher">{{$item["nameTeacher"]}}  </span>
                     </div>
-
-                    <a href="{{url('payPage')}}" >اختيار</a>
-                </div>
+                    <var>
+                    @php
+                    $idd = $item["id"]; 
+                    
+                    @endphp
+                </var>
+                
+                <a href="payPage/{{$idd}}" >اختيار</a>
+            </div>
                 @endforeach
                 
                 

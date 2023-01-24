@@ -90,7 +90,7 @@ class CustomAuthController extends Controller
                 "materialEn" => "Math",
                 "nameTeacher" => "محمد خالد",
                 "emailTeacher" => "mohammedKhaled@gmail.com",
-                "detail" => "انا المدرس محمد خالد تخصصي رياضيات ماخذ شهادة في التدريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+                "detail" => "انا المدرس محمد خالد تخصصي رياضيات حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
             ],
             [
                 "id" => 1,
@@ -98,9 +98,34 @@ class CustomAuthController extends Controller
                 "materialEn" => "Pysics",
                 "nameTeacher" => "سعد علي",
                 "emailTeacher" => "saadAli@gmail.com",
-                "detail" => "انا المدرس سعد علي تخصصي فيزياء ماخذ شهادة في التدريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+                "detail" => "انا المدرس سعد علي تخصصي فيزياء حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+            ],
+            [
+                "id" => 2,
+                "materialAr" => "حاسب الألي",
+                "materialEn" => "Computer",
+                "nameTeacher" => "عبدالله محمد",
+                "emailTeacher" => "abdualah@gmail.com",
+                "detail" => "انا المدرس عبد الله محمد تخصصي حاسب الألي حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+            ],
+            [
+                "id" => 3,
+                "materialAr" => "حاسب الألي",
+                "materialEn" => "Computer",
+                "nameTeacher" => "باسل محمد",
+                "emailTeacher" => "prog.b9@gmail.com",
+                "detail" => "انا المدرس باسل محمد تخصصي تصميم واجهات امامية للمواقع حاصل على شهادة في دبلوم واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+            ],
+            [
+                "id" => 4,
+                "materialAr" => "كيمياء",
+                "materialEn" => "Chamstry",
+                "nameTeacher" => "جمال نور",
+                "emailTeacher" => "jamalNoor@gmail.com",
+                "detail" => "انا المدرس سعد علي تخصصي كيمياء حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الثانوي",
             ],
         ];
+
 
 
         $data = [];
@@ -113,7 +138,7 @@ class CustomAuthController extends Controller
         return view("pages.dashboard", compact("clients", "data", "dataTeacher"));
     }
 
-    public function payPage()
+    public function payPage($id)
     {
 
         
@@ -126,7 +151,7 @@ class CustomAuthController extends Controller
                 "materialEn" => "Math",
                 "nameTeacher" => "محمد خالد",
                 "emailTeacher" => "mohammedKhaled@gmail.com",
-                "detail" => "انا المدرس محمد خالد تخصصي رياضيات ماخذ شهادة في التدريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+                "detail" => "انا المدرس محمد خالد تخصصي رياضيات حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
             ],
             [
                 "id" => 1,
@@ -134,9 +159,34 @@ class CustomAuthController extends Controller
                 "materialEn" => "Pysics",
                 "nameTeacher" => "سعد علي",
                 "emailTeacher" => "saadAli@gmail.com",
-                "detail" => "انا المدرس سعد علي تخصصي فيزياء ماخذ شهادة في التدريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+                "detail" => "انا المدرس سعد علي تخصصي فيزياء حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+            ],
+            [
+                "id" => 2,
+                "materialAr" => "حاسب الألي",
+                "materialEn" => "Computer",
+                "nameTeacher" => "عبدالله محمد",
+                "emailTeacher" => "abdualah@gmail.com",
+                "detail" => "انا المدرس عبد الله محمد تخصصي حاسب الألي حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+            ],
+            [
+                "id" => 3,
+                "materialAr" => "حاسب الألي",
+                "materialEn" => "Computer",
+                "nameTeacher" => "باسل محمد",
+                "emailTeacher" => "prog.b9@gmail.com",
+                "detail" => "انا المدرس باسل محمد تخصصي تصميم واجهات امامية للمواقع حاصل على شهادة في دبلوم واستطيع ان ادرس طلاب الابتدائي و المتوسط والثانوي",
+            ],
+            [
+                "id" => 4,
+                "materialAr" => "كيمياء",
+                "materialEn" => "Chamstry",
+                "nameTeacher" => "جمال نور",
+                "emailTeacher" => "jamalNoor@gmail.com",
+                "detail" => "انا المدرس سعد علي تخصصي كيمياء حاصل على شهادة في بكالوريس واستطيع ان ادرس طلاب الثانوي",
             ],
         ];
+
 
         $data = [];
         if (Session::has("loginId")) {
@@ -145,7 +195,12 @@ class CustomAuthController extends Controller
 
         // this var($clients) is storaged all data
         $clients = Client::latest()->paginate();
-        return view("pages.payPage", compact("clients", "data", "dataTeacher"));
+        return view("pages.payPage", compact("clients", "data", "dataTeacher","id"));
+    }
+
+    public function send()
+    {
+        return view("pages.send");
     }
 
 
@@ -154,9 +209,11 @@ class CustomAuthController extends Controller
 
     public function logout()
     {
-        if (Session::has("loginId")) {
-            Session::pull("loginId");
+        if (Session::has("email")) {
+            Session::pull("email");
         }
-        return redirect("pages.login");
+        // $r->session()->forget("loginId");
+        // $r->session()->forget("email");
+        return redirect("/login");
     }
 }

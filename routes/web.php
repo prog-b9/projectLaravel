@@ -17,7 +17,7 @@ use App\Http\Controllers\CustomAuthController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.login');
 });
 
 // this is Route Go To Page Only
@@ -31,7 +31,8 @@ Route::post("loginClient","App\Http\Controllers\CustomAuthController@loginClient
 
 
 Route::get("homePage","App\Http\Controllers\CustomAuthController@dashboard");
-Route::get("payPage","App\Http\Controllers\CustomAuthController@payPage");
+Route::get("payPage/{id}","App\Http\Controllers\CustomAuthController@payPage");
+Route::get("senduri","App\Http\Controllers\CustomAuthController@send");
 Route::get("logout","App\Http\Controllers\CustomAuthController@logout");
 
 
